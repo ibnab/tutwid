@@ -26,5 +26,5 @@ define([
          return false;
         }
     };
-    wd = new WD();
+    wd_instance = new WD();
 });

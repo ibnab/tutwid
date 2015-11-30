@@ -1,0 +1,23 @@
+<div class="pp-buttons-container">
+    <button id="<?php echo $block->getHtmlId() ?>" onclick="return false;">
+        <span><span><span><?php echo $block->escapeHtml($block->getButtonLabel()); ?></span></span></span>
+    </button>
+</div>
+<div id="myconfirm">hello</div>
+<script>
+    
+    require([
+        'jquery',
+        'wd'
+    ], function ($,wd) {
+       
+         
+         wd_instance.initialize();
+         var params = {internUrl:"<?php echo $block->getInternUrl() ?>", apiKeyId: "#<?php echo $block->getApiKeyId() ?>", htmlId: "#<?php echo $block->getHtmlId() ?>"}; 
+         $("#<?php echo $block->getHtmlId() ?>").on( "click", function() {
+            wd_instance.validate();
+         });
+          
+        
+    });
+</script>

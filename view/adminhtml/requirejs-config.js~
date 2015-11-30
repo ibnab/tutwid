@@ -1,0 +1,7 @@
+var config = {
+    map: {
+        '*': {
+            cf:       'Ibnab_TutWid/js/wd'
+        }
+    }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="ibnab_tutwid" translate="label" sortOrder="200">
+            <label>Ibnab</label>
+        </tab>
+        <section id="ibnab_tutwid_control" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Ibnab TutWid</label>
+            <tab>ibnab_tutwid</tab>
+            <resource>Ibnab_TutWid::ibnab_tutwid_control</resource>
+            <group id="apioptions" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>API Access details</label>
+                <field id="api_key" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>API Key</label>
+                    <comment><![CDATA[This is the  API key]]></comment>
+                </field>
+                <field id="check" translate="button_label"  sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label/>
+                    <attribute type="api_key_id">ibnab_tutwid_control_apioptions_api_key</attribute>                 
+                    <attribute type="load_config_url"><![CDATA[asterisk/apicontrol/loadconfig]]></attribute>
+                    <button_label><![CDATA[Check]]></button_label>
+                    <button_url>
+                        <![CDATA[tutwid/apicontrol/check]]>
+                    </button_url>
+                    <frontend_model>Ibnab\TutWid\Block\Check</frontend_model>
+                    <comment><![CDATA[Once you check you API access, please click Save Setting for begin use extension.]]></comment>
+                </field>
+            </group>       
+           
+        </section>
+    </system>
+</config>
